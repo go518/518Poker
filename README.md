@@ -1,3 +1,10 @@
-小遊戲！ 網址：https://ya95123.github.io/game-memoryPoker/
+# 記憶 Poker
+網址：https://ya95123.github.io/game-memoryPoker/
 
-很適合三五好友相聚時，可以一起玩的小遊戲 😊
+很適合三五好友相聚時，可以一起玩的小遊戲 😊  
+是一款翻牌記憶的休閒遊戲，同時可以幫忙計分誰成功翻得同樣的牌數較多。  
+
+p.s.牌數分為 8、16、26、34、42、52 張 六種選擇，最少1人，最多6人玩。
+
+### 遊戲畫面
+<img src="./images/ex.png">
