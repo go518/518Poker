@@ -4,19 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>記憶 Poker</title>
+  <title>记忆 Poker</title>
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./dist/style.min.css">
 </head>
 
 <body>
-  <!-- 1.歡迎對話框 -->
+  <!-- 1.欢迎对话框 -->
   <div id="welcome1" class="talk">
     <div class="content">
-      <p class="tTitle">記憶 Up Up Up ✨</p>
-      <span class="tText">歡迎來到，簡單動腦時間 ~<br>大朋友小朋友，還是老朋友，讓我們來提升記憶吧！</span><br>
+      <p class="tTitle">记忆 Up Up Up ✨</p>
+      <span class="tText">欢迎來到，简单动脑时间 ~<br>大朋友小朋友，还是老朋友，让我们来提升记忆吧！</span><br>
       <select id="sNum" class="select input">
-        <option value="">選一個想玩的總牌數</option>
+        <option value="">选一个想玩的总牌数</option>
         <option value="8">8</option>
         <option value="16">16</option>
         <option value="26">26</option>
@@ -28,14 +28,14 @@
     </div>
   </div>
 
-  <!-- 2.遊戲方式及人數對話框 -->
+  <!-- 2.游戏方式及人数对话框 -->
   <div id="welcome2" class="talk invisible">
     <div class="content">
-      <p class="tTitle">🃏 遊戲規則 🃏</p>
-      <span class="tText">選擇一對相同的數字和圖像的卡片，即獲得一分!<br>且可繼續翻下一對卡片。答錯則換下一位玩家 😎</span><br>
-      <span class="remark">(一個人玩也是OK的哦)</span><br id="remarkBr">
+      <p class="tTitle">🃏 游戏规则 🃏</p>
+      <span class="tText">选择一对相同的数字和图像的卡片，即获得一分!<br>且可继续翻下一对卡片。答错則换下一位玩家 😎</span><br>
+      <span class="remark">(一个人玩也是OK的哦)</span><br id="remarkBr">
       <select id="sPlayers" class="select input">
-        <option id="resetP" value="">請選擇玩家人數</option>
+        <option id="resetP" value="">请选择玩家人数</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -49,17 +49,17 @@
     </div>
   </div>
 
-  <!-- 3-1.(單人)遊戲結束時對話框 條件：1個人 &&  -->
+  <!-- 3-1.(单人)游戏結束时对话框 条件：1个人 &&  -->
   <div id="end1" class="end invisible">
     <div class="content">
       <p class="tTitle">恭喜你完成了</p>
-      <!-- TODO　放恭喜圖片(隨機) -->
+      <!-- TODO　放恭喜图片(随机) -->
       <div class="comPicsFrame">
         <lottie-player class="comPics" src="https://assets10.lottiefiles.com/packages/lf20_5JFpAw.json"
           background="transparent" speed="1" loop autoplay></lottie-player>
       </div>
-      <span class="remark">要再來一場嗎？</span><br>
-      <!-- 休息畫面 -->
+      <span class="remark">要再來一场吗？</span><br>
+      <!-- 休息画面 -->
       <input id="rest1" class="confirm rest" type="button" value="Rest">
       <!-- 直接重新整理 -->
       <input id="yes1" class="confirm yes" type="button" value="Yes"
@@ -67,21 +67,21 @@
     </div>
   </div>
 
-  <!-- 3-2.(2人以上)遊戲結束時對話框 -->
+  <!-- 3-2.(2人以上)游戏結束時对话对话框 -->
   <div id="end2" class="endPs invisible">
     <div class="content">
-      <!-- 勝者 -->
+      <!-- 胜者 -->
       <p id="winner1" class="tTitle">Winner is <span id="winnerN1" class="red weight"></span> 💪</p>
       <!-- 平手 -->
       <p id="winner2" class="tTitle"><span id="winnerN2" class="blue weight"></span> 平手！😎</p>
-      <!-- 恭喜圖片 -->
+      <!-- 恭喜图片 -->
       <div class="comPicsFrame">
         <lottie-player class="comPics2" src="https://assets1.lottiefiles.com/private_files/lf30_4uTjNk.json"
           background="transparent" speed="1" loop autoplay>
         </lottie-player>
       </div>
-      <span class="remark">要再來一場嗎？</span><br>
-      <!-- 休息畫面 -->
+      <span class="remark">要再来一场吗？</span><br>
+      <!-- 休息画面 -->
       <input id="rest2" class="confirm rest" type="button" value="Rest">
       <!-- 直接重新整理 -->
       <input id="yes2" class="confirm yes" type="button" value="Yes"
@@ -89,13 +89,13 @@
     </div>
   </div>
 
-  <!-- 休息畫面 -->
+  <!-- 休息画面 -->
   <div class="restPicF invisibleF">
     <lottie-player id="restPic" class="restPic" src="https://assets10.lottiefiles.com/packages/lf20_sxCwLo.json"
       background="transparent" speed="1" loop autoplay>
   </div>
 
-  <!-- 4.記分板 -->
+  <!-- 4.记分板 -->
   <table id="scoreBoard" class="invisible" cellspacing="0">
     <tr>
       <td>Name</td>
@@ -103,19 +103,19 @@
     </tr>
   </table>
 
-  <!-- TODO  4.完成小獎勵(可愛圖隨機)、祝福的話(隨機) 5.rest 背景改善  -->
+  <!-- TODO  4.完成小奖励(可爱图随机)、祝福的话(随机) 5.rest 背景改善  -->
   <div id="game" class="invisible">
     <div id="frame"></div>
   </div>
 
   <div id="footer">
     <span>- Made by Alfred Rain -</span><br>
-    <span>Thanks for 泰山職訓場 💪.</span>
+    <span>Thanks for 泰山职训场 💪.</span>
     <span>Pictures from <a href="https://loading.io/background/m-interstellar/" target="_blank">Loding.io</a>, <a
         href="https://lottiefiles.com/featured" target="_blank">Lottie Files</a>.</span>
   </div>
 
-  <!-- 動態圖連結 -->
+  <!-- 动态图连接 -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="./jquery-3.5.0.min.js"></script>
   <script>
